@@ -18,47 +18,92 @@
                 <form id="examForm">
                     <div class="mb-4">
                         <label for="q1" class="form-label">1) (4 puntos) Explique la diferencia entre una clase y un objeto.</label>
-                        <textarea class="form-control" id="q1" rows="3" placeholder="Escribe tu respuesta aquí"></textarea>
+                        <select class="form-select" id="q1">
+                            <option value="">Selecciona una respuesta</option>
+                            <option value="A">Una clase es una instancia de un objeto, un objeto es una plantilla.</option>
+                            <option value="B">Una clase es una plantilla, un objeto es una instancia de la clase.</option>
+                            <option value="C">Una clase es un método, un objeto es una función.</option>
+                        </select>
                     </div>
 
                     <div class="mb-4">
                         <label for="q2" class="form-label">2) (8 puntos) ¿Qué diferencias tienen las funciones PDO::exec() y PDO::query()? Especifique sus posibles resultados.</label>
-                        <textarea class="form-control" id="q2" rows="3" placeholder="Escribe tu respuesta aquí"></textarea>
+                        <select class="form-select" id="q2">
+                            <option value="">Selecciona una respuesta</option>
+                            <option value="A">PDO::exec() devuelve un objeto PDOStatement, PDO::query() devuelve un entero.</option>
+                            <option value="B">PDO::exec() devuelve el número de filas afectadas, PDO::query() devuelve un objeto PDOStatement.</option>
+                            <option value="C">PDO::exec() y PDO::query() son equivalentes.</option>
+                        </select>
                     </div>
 
                     <div class="mb-4">
                         <label for="q3" class="form-label">3) (8 puntos) Explique para qué sirven las variables $_GET, $_POST, $_REQUEST y $_FILES.</label>
-                        <textarea class="form-control" id="q3" rows="3" placeholder="Escribe tu respuesta aquí"></textarea>
+                        <select class="form-select" id="q3">
+                            <option value="">Selecciona una respuesta</option>
+                            <option value="A">$_GET y $_POST manejan la subida de archivos, $_REQUEST y $_FILES manejan formularios.</option>
+                            <option value="B">$_GET maneja datos de formularios enviados por GET, $_POST por POST, $_REQUEST maneja ambos, $_FILES datos de archivos subidos.</option>
+                            <option value="C">$_GET, $_POST y $_FILES son equivalentes, $_REQUEST no se usa.</option>
+                        </select>
                     </div>
 
                     <div class="mb-4">
                         <label for="q4" class="form-label">4) (4 puntos) Dado el siguiente array, recórralo utilizando el constructor foreach, e imprima la clave (CI) y valor (nombre) de cada tupla.</label>
-                        <textarea class="form-control" id="q4" rows="3" placeholder="Escribe tu respuesta aquí"></textarea>
+                        <select class="form-select" id="q4">
+                            <option value="">Selecciona una respuesta</option>
+                            <option value="A">Recorrer el array con un bucle for y utilizar print_r para imprimir.</option>
+                            <option value="B">Utilizar un bucle foreach para recorrer e imprimir clave y valor.</option>
+                            <option value="C">Recorrer el array con un bucle while e imprimir con echo.</option>
+                        </select>
                     </div>
 
                     <div class="mb-4">
                         <label for="q5" class="form-label">5) (8 puntos) Explique cómo se crea una sesión y cómo se inicializa y se obtiene el valor de una variable de sesión.</label>
-                        <textarea class="form-control" id="q5" rows="3" placeholder="Escribe tu respuesta aquí"></textarea>
+                        <select class="form-select" id="q5">
+                            <option value="">Selecciona una respuesta</option>
+                            <option value="A">Usando session_start() y la variable global $_SESSION para manejar los datos.</option>
+                            <option value="B">Usando session_create() y la variable global $_VARS para manejar los datos.</option>
+                            <option value="C">No es posible crear sesiones en PHP.</option>
+                        </select>
                     </div>
 
                     <div class="mb-4">
                         <label for="q6" class="form-label">6) (8 puntos) Explique cómo se crea y recupera una cookie que tenga una duración de 12 horas.</label>
-                        <textarea class="form-control" id="q6" rows="3" placeholder="Escribe tu respuesta aquí"></textarea>
+                        <select class="form-select" id="q6">
+                            <option value="">Selecciona una respuesta</option>
+                            <option value="A">Con setcookie() para crearla y $_COOKIE para recuperarla.</option>
+                            <option value="B">Con session_cookie() para crearla y $_COOKIE para recuperarla.</option>
+                            <option value="C">No se pueden crear cookies en PHP.</option>
+                        </select>
                     </div>
 
                     <div class="mb-4">
                         <label for="q7" class="form-label">7) (10 puntos) Explique cuáles son los pasos para realizar una transacción a una base de datos Mysql en PHP.</label>
-                        <textarea class="form-control" id="q7" rows="3" placeholder="Escribe tu respuesta aquí"></textarea>
+                        <select class="form-select" id="q7">
+                            <option value="">Selecciona una respuesta</option>
+                            <option value="A">Conectar con el servidor, seleccionar una base de datos, enviar la instrucción SQL, procesar resultados, cerrar conexión.</option>
+                            <option value="B">Escribir la instrucción SQL, enviar los datos al servidor, procesar la base de datos, cerrar la base de datos.</option>
+                            <option value="C">Iniciar una transacción con PDO::beginTransaction(), ejecutar las consultas, finalizar con PDO::commit().</option>
+                        </select>
                     </div>
 
                     <div class="mb-4">
                         <label for="q8" class="form-label">8) (8 puntos) Indique las principales ventajas de la utilización de sesiones en PHP respecto a las cookies.</label>
-                        <textarea class="form-control" id="q8" rows="3" placeholder="Escribe tu respuesta aquí"></textarea>
+                        <select class="form-select" id="q8">
+                            <option value="">Selecciona una respuesta</option>
+                            <option value="A">Las sesiones almacenan más datos que las cookies y son más seguras.</option>
+                            <option value="B">Las cookies son más seguras que las sesiones, y almacenan más datos.</option>
+                            <option value="C">Las sesiones son iguales a las cookies, pero se usan menos.</option>
+                        </select>
                     </div>
 
                     <div class="mb-4">
                         <label for="q9" class="form-label">9) (10 puntos) Describa lo que hacen los siguientes métodos en una clase: __construct() y __destruct(). ¿Cómo se invocan? ¿Su construcción es obligatoria u opcional?</label>
-                        <textarea class="form-control" id="q9" rows="3" placeholder="Escribe tu respuesta aquí"></textarea>
+                        <select class="form-select" id="q9">
+                            <option value="">Selecciona una respuesta</option>
+                            <option value="A">__construct() y __destruct() inicializan y destruyen objetos automáticamente, su uso es opcional.</option>
+                            <option value="B">__construct() y __destruct() se usan para iniciar y finalizar bases de datos, son obligatorios.</option>
+                            <option value="C">__construct() y __destruct() son métodos de clase que nunca se invocan automáticamente.</option>
+                        </select>
                     </div>
 
                     <div class="text-center">
