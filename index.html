@@ -4,62 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Examen de Programación</title>
-    <link rel="stylesheet" href="index.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Examen de Programación</h1>
-        <form id="examForm">
-            <div class="question">
-                <p>1) (4 puntos) Explique la diferencia entre una clase y un objeto.</p>
-                <textarea id="q1" rows="4" placeholder="Escribe tu respuesta aquí"></textarea>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header text-center">
+                <h1>Examen de Programación</h1>
             </div>
+            <div class="card-body">
+                <form id="examForm">
+                    <div class="mb-4">
+                        <label for="q1" class="form-label">1) (4 puntos) Explique la diferencia entre una clase y un objeto.</label>
+                        <textarea class="form-control" id="q1" rows="3" placeholder="Escribe tu respuesta aquí"></textarea>
+                    </div>
 
-            <div class="question">
-                <p>2) (8 puntos) ¿Qué diferencias tienen las funciones PDO::exec() y PDO::query()? Especifique sus posibles resultados.</p>
-                <textarea id="q2" rows="4" placeholder="Escribe tu respuesta aquí"></textarea>
+                    <div class="mb-4">
+                        <label for="q2" class="form-label">2) (8 puntos) ¿Qué diferencias tienen las funciones PDO::exec() y PDO::query()? Especifique sus posibles resultados.</label>
+                        <textarea class="form-control" id="q2" rows="3" placeholder="Escribe tu respuesta aquí"></textarea>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="q3" class="form-label">3) (8 puntos) Explique para qué sirven las variables $_GET, $_POST, $_REQUEST y $_FILES.</label>
+                        <textarea class="form-control" id="q3" rows="3" placeholder="Escribe tu respuesta aquí"></textarea>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="q4" class="form-label">4) (4 puntos) Dado el siguiente array, recórralo utilizando el constructor foreach, e imprima la clave (CI) y valor (nombre) de cada tupla.</label>
+                        <textarea class="form-control" id="q4" rows="3" placeholder="Escribe tu respuesta aquí"></textarea>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="q5" class="form-label">5) (8 puntos) Explique cómo se crea una sesión y cómo se inicializa y se obtiene el valor de una variable de sesión.</label>
+                        <textarea class="form-control" id="q5" rows="3" placeholder="Escribe tu respuesta aquí"></textarea>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="q6" class="form-label">6) (8 puntos) Explique cómo se crea y recupera una cookie que tenga una duración de 12 horas.</label>
+                        <textarea class="form-control" id="q6" rows="3" placeholder="Escribe tu respuesta aquí"></textarea>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="q7" class="form-label">7) (10 puntos) Explique cuáles son los pasos para realizar una transacción a una base de datos Mysql en PHP.</label>
+                        <textarea class="form-control" id="q7" rows="3" placeholder="Escribe tu respuesta aquí"></textarea>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="q8" class="form-label">8) (8 puntos) Indique las principales ventajas de la utilización de sesiones en PHP respecto a las cookies.</label>
+                        <textarea class="form-control" id="q8" rows="3" placeholder="Escribe tu respuesta aquí"></textarea>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="q9" class="form-label">9) (10 puntos) Describa lo que hacen los siguientes métodos en una clase: __construct() y __destruct(). ¿Cómo se invocan? ¿Su construcción es obligatoria u opcional?</label>
+                        <textarea class="form-control" id="q9" rows="3" placeholder="Escribe tu respuesta aquí"></textarea>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="button" class="btn btn-primary" onclick="validateExam()">Enviar Respuestas</button>
+                    </div>
+                </form>
+                <div id="result" class="mt-4 text-center"></div>
             </div>
-
-            <div class="question">
-                <p>3) (8 puntos) Explique para qué sirven las variables $_GET, $_POST, $_REQUEST y $_FILES.</p>
-                <textarea id="q3" rows="4" placeholder="Escribe tu respuesta aquí"></textarea>
-            </div>
-
-            <div class="question">
-                <p>4) (4 puntos) Dado el siguiente array, recórralo utilizando el constructor foreach, e imprima la clave (CI) y valor (nombre) de cada tupla.</p>
-                <textarea id="q4" rows="4" placeholder="Escribe tu respuesta aquí"></textarea>
-            </div>
-
-            <div class="question">
-                <p>5) (8 puntos) Explique cómo se crea una sesión y cómo se inicializa y se obtiene el valor de una variable de sesión.</p>
-                <textarea id="q5" rows="4" placeholder="Escribe tu respuesta aquí"></textarea>
-            </div>
-
-            <div class="question">
-                <p>6) (8 puntos) Explique cómo se crea y recupera una cookie que tenga una duración de 12 horas.</p>
-                <textarea id="q6" rows="4" placeholder="Escribe tu respuesta aquí"></textarea>
-            </div>
-
-            <div class="question">
-                <p>7) (10 puntos) Explique cuáles son los pasos para realizar una transacción a una base de datos Mysql en PHP.</p>
-                <textarea id="q7" rows="4" placeholder="Escribe tu respuesta aquí"></textarea>
-            </div>
-
-            <div class="question">
-                <p>8) (8 puntos) Indique las principales ventajas de la utilización de sesiones en PHP respecto a las cookies.</p>
-                <textarea id="q8" rows="4" placeholder="Escribe tu respuesta aquí"></textarea>
-            </div>
-
-            <div class="question">
-                <p>9) (10 puntos) Describa lo que hacen los siguientes métodos en una clase: __construct() y __destruct(). ¿Cómo se invocan? ¿Su construcción es obligatoria u opcional?</p>
-                <textarea id="q9" rows="4" placeholder="Escribe tu respuesta aquí"></textarea>
-            </div>
-
-            <button type="button" onclick="validateExam()">Enviar Respuestas</button>
-        </form>
-        <div id="result"></div>
+        </div>
     </div>
 
+    <!-- Bootstrap JS and dependencies (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
